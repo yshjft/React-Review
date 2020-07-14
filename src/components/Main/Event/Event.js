@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Topic from './Topic';
 import Read from './Read';
+import Explain from './Explain';
 
 class Event extends Component{
   constructor(props){
@@ -28,6 +29,7 @@ class Event extends Component{
             });
           }.bind(this)}></Topic>
         <Read id={this.state.selected_id} contents={this.state.contents_for_event}></Read>
+        <Explain></Explain>
       </div>
     );
   }
