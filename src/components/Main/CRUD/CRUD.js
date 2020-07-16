@@ -26,10 +26,8 @@ class CRUD extends Component {
     if(this.state.mode === "create"){
       _content=<Create submit={function(_title, _desc){
         this.max_content_id=this.max_content_id+1;
-
         var newContents= Array.from(this.state.contents); //기존 배열 복사
         newContents.push({id:this.max_content_id, title:_title, desc:_desc});
-
         this.setState({
           contents:newContents,
           mode : 'read',
@@ -39,10 +37,27 @@ class CRUD extends Component {
     }else if(this.state.mode === "read"){
       _content=<Read selectedID={this.state.selected_id} contents={this.state.contents}></Read>
     }else if(this.state.mode === "update"){
-
-      _content=<Update id={this.state.selected_id}
+      _content=<Update
+        update={function(_id, _title, _desc){
+          var updateContents=Array.from(this.state.contents);
+          var i=0;
+          while(i<updateContents.length){
+            if(updateContents[i].id === _id){
+              updateContents[i]={id:_id, title:_title, desc:_desc};
+              break;
+            }
+            i++;
+          }
+          this.setState({
+            contents : updateContents,
+            mode : 'read',
+            selected_id : _id
+          });
+        }.bind(this)}
+        id={this.state.selected_id}
         title={this.state.contents[this.state.selected_id-1].title}
-        desc={this.state.contents[this.state.selected_id-1].desc}></Update>
+        desc={this.state.contents[this.state.selected_id-1].desc}
+        ></Update>
     }
 
     return(
@@ -58,22 +73,38 @@ class CRUD extends Component {
             });
           }.bind(this)}>
         </TOC>
+        <br/>
         <Control changeMode={function(new_mode){
           let _mode=new_mode;
           if(_mode === 'delete'){
             if(window.confirm("really?")){
-              alert('not yet');
+              var deletedContents= Array.from(this.state.contents);
+              var i=0;
+              while(i<deletedContents.length){
+                if(deletedContents[i].id === this.state.selected_id){
+                  deletedContents.splice(i,1);
+                  break;
+                }
+                i++;
+              }
+              for(var j=0; j<deletedContents.length; j++){
+                deletedContents[j].id=j+1;
+              }
+              this.max_content_id=this.max_content_id-1;
+              
+              this.setState ({
+                mode : 'read',
+                contents : deletedContents,
+                selected_id : 1,
+              });
+              alert('삭제되었습니다.');
             }
-            this.setState({
-              mode : "read",
-            })
           }else{
             this.setState({
               mode : _mode,
             })
           }
         }.bind(this)}></Control>
-        {/* <Read selectedID={this.state.selected_id} contents={this.state.contents}></Read> */}
         {_content}
       </div>
     );
