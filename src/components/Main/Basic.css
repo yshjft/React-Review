@@ -1,0 +1,15 @@
+.basic_component{
+  padding-left:30%;
+  padding-right:30%;
+  padding-top:10px;
+  padding-bottom:15px
+}
+
+.basic_title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.basic_contents{
+  font-size: 20px;
+}

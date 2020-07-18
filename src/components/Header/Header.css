@@ -1,3 +1,15 @@
-#header{
+.header{
   text-align:center;
+}
+
+.header_title{
+  padding:10px;
+  font-size : 50px;
+  font-weight : bold;
+}
+
+.header_subtitle{
+  padding:15px;
+  font-size : 20px;
+  font-weight : bold;
 }

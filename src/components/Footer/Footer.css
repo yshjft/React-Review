@@ -1,0 +1,29 @@
+.footer{
+  text-align : center;
+}
+
+.footer-title{
+  padding : 10px;
+  font-size:35px;
+  font-weight: bold;
+}
+
+.footer-madeby{
+  padding : 5px;
+  font-size:25px;
+  font-weight: bold;
+}
+
+.footer-github{
+  color:black;
+  padding : 15px;
+  font-size : 20px;
+  text-decoration: none;
+}
+
+.footer-github:hover{
+  color:blue;
+  padding : 15px;
+  font-size : 20px;
+  text-decoration: none;
+}

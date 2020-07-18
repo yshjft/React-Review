@@ -1,16 +1,13 @@
 import React, {Component} from 'react'
+import './State.css'
 
 class State extends Component{
   render(){
     return(
       <div className='state_component'>
-        <div className='contents_title'>{this.props.title}</div>
-        <div className='code_img'>+code image+</div>
-        <div className='contents'>
-          <div className='sub_title'></div>
-          <div className='sub_contents'></div>
-          
-        </div>
+        <div className='state_title'>{this.props.title}</div>
+        {/* <div className='code_img'>+code image+</div> */}
+        <div className='state_contents'>state를 사용한 component</div>
       </div>
     );
   }
