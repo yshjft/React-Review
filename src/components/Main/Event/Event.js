@@ -3,6 +3,8 @@ import Topic from './Topic';
 import Read from './Read';
 import Explain from './Explain';
 
+import './Event.css';
+
 class Event extends Component{
   constructor(props){
     super(props);
@@ -20,6 +22,7 @@ class Event extends Component{
     return(
       <div className='event_component'>
         <div className='event_title'>{this.props.title}</div>
+        <Explain></Explain>
         <Topic 
           contents={this.state.contents_for_event} 
           changePage={function(ID){ //Topic컴포넌트에 호출됩니다.
@@ -29,7 +32,6 @@ class Event extends Component{
             });
           }.bind(this)}></Topic>
         <Read id={this.state.selected_id} contents={this.state.contents_for_event}></Read>
-        <Explain></Explain>
       </div>
     );
   }
