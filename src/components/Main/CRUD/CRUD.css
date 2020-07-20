@@ -1,0 +1,25 @@
+button{
+  width: 90px;
+}
+
+.crud_component{
+  padding-left:30%;
+  padding-right:30%;
+  padding-top:10px;
+  padding-bottom:15px
+}
+
+.crud_title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.crud_toc_component{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.crud_control_component{
+  display:flex;
+  flex-wrap:wrap;
+}

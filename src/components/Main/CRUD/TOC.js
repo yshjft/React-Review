@@ -16,7 +16,7 @@ class TOC extends Component{
     }
 
     return(
-      <div>
+      <div className='crud_toc_component'>
         {list}
       </div>
     )

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Control extends Component{
   render(){
     return(
-      <div>
+      <div className='crud_control_component'>
         <div>
           <button onClick={function(){
             this.props.changeMode("create");

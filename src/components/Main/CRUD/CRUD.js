@@ -5,6 +5,8 @@ import Create from './Create';
 import Read from './Read';
 import Update from './Update';
 
+import './CRUD.css';
+
 class CRUD extends Component {
   constructor(props){
     super(props);
@@ -62,7 +64,7 @@ class CRUD extends Component {
 
     return(
       <div className='crud_component'>
-        <div>{this.props.title}</div>
+        <div className='crud_title'>{this.props.title}</div>
         <TOC 
           contents={this.state.contents}
           selectContents={function(ID){
@@ -73,6 +75,8 @@ class CRUD extends Component {
             });
           }.bind(this)}>
         </TOC>
+        <br/>
+        {_content}
         <br/>
         <Control changeMode={function(new_mode){
           let _mode=new_mode;
@@ -105,7 +109,7 @@ class CRUD extends Component {
             })
           }
         }.bind(this)}></Control>
-        {_content}
+        
       </div>
     );
   }
