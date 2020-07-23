@@ -13,4 +13,4 @@ class Props extends Component{
   }
 }
 
-export default Props
+export default Props;
