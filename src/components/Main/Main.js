@@ -14,7 +14,7 @@ class Main extends Component {
       content_for_state : 'state를 사용한 component 입니다.',
       title_for_event : 'event',
       title_for_crud : 'CRUD',
-      title_for_func : 'Functional Component VS Class Component'
+      title_for_func : 'Functional VS Class'
     }
   }
   render(){

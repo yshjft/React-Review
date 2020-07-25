@@ -1,0 +1,14 @@
+button{
+  width: 90px;
+}
+.class_func_component{
+  padding-left:30%;
+  padding-right:30%;
+  padding-top:10px;
+  padding-bottom:15px
+}
+
+.class_func_title{
+  font-size: 30px;
+  font-weight: bold;
+}

@@ -10,7 +10,7 @@ class ClassComp extends Component{
   render(){
     return(
       <div>
-        <div>class style component</div>
+        <h3>class style component</h3>
         <div>Number : {this.state.number}</div>
         <input 
           type='button' 

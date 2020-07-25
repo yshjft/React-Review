@@ -5,7 +5,7 @@ function FuncComp(props){
 
   return(
     <div>
-      <div>{props.title}</div>
+      <h3>{props.title}</h3>
       <div>Number: {number}</div>
       <input 
         type='button' 
