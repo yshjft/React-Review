@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Basic from './Basic';
-import Props from './Props';
-import State from './State';
+import Basic from './Basic/Basic'
+import Props from './Props/Props';
+import State from './State/State';
 import Event from './Event/Event';
 import CRUD from './CRUD/CRUD';
 import Functional from './FUNCTIONAL/Functional'

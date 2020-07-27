@@ -1,5 +1,8 @@
 .footer{
+  padding :3%;
+  color : white;
   text-align : center;
+  background-color: black;
 }
 
 .footer-title{
@@ -15,14 +18,14 @@
 }
 
 .footer-github{
-  color:black;
+  color:white;
   padding : 15px;
   font-size : 20px;
   text-decoration: none;
 }
 
 .footer-github:hover{
-  color:blue;
+  color:yellow;
   padding : 15px;
   font-size : 20px;
   text-decoration: none;
