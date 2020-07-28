@@ -6,6 +6,8 @@ import Event from './Event/Event';
 import CRUD from './CRUD/CRUD';
 import Functional from './FUNCTIONAL/Functional'
 
+import './Main.css';
+
 class Main extends Component {
   constructor(props){
     super(props);
@@ -19,7 +21,7 @@ class Main extends Component {
   }
   render(){
     return(
-      <div id="mainContents">
+      <div id="mainContents" className="mainContents">
         <Basic></Basic>
         <Props title='component with props' contents='props를 사용한 component입니다.'></Props>
         <State title={this.state.title_for_state} contents={this.state.content_for_state}></State>
